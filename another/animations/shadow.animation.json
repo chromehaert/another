@@ -1,0 +1,14 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.shadow": {
+      "loop": true,
+      "animation_length": 0.6,
+      "bones": {
+        "shadow": {
+          "rotation": [ "-query.camera_rotation(0)", "-query.body_y_rotation + query.camera_rotation(1) + 180", 0]
+        }
+      }
+    }
+  }
+}
