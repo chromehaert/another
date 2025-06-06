@@ -1,0 +1,103 @@
+{
+  
+  "namespace": "bg",
+  
+  "custom": {
+    "type": "panel",
+    "controls": [
+      { "vignette@bg.vignette": {} },
+      { "noise@bg.noise": {} },
+      { "overlay1@bg.overlay1": {} },
+      { "1@bg.1": {} },
+      { "top@bg.top": {} },
+      { "overlay2@bg.overlay2": {} },
+      { "2@bg.2": {} },
+      { "bottom@bg.bottom": {} }
+    ]
+  },
+  
+  //---------------------------------------------------------------------------
+  // backgrounds
+  //---------------------------------------------------------------------------
+  
+  "vignette": {
+    "type": "image",
+    "fill": true,
+    "keep_ratio": false,
+    "texture": "textures/ui/vignette",
+    "alpha": 0.5,
+    "layer": 1
+  },
+  
+  "noise": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/noise",
+    "layer": 0
+  },
+  
+/*  "overlay1": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "color1": [ 0.29, 0.27, 0.24, 1.0 ],
+    "color2": [ 0.21, 0.18, 0.18, 1.0 ],
+    "layer": -9
+  }, */
+  
+  "overlay1": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "color1": [ 0.3, 0.3, 0.3, 1.0 ],
+    "color2": [ 0.2, 0.2, 0.2, 1.0 ],
+    "layer": -9
+  },
+  
+  "overlay2": {
+    "type": "custom",
+    "renderer": "gradient_renderer",
+    "color1": [ 0.6, 0.6, 0.6, 1.0 ],
+    "color2": [ 0.2, 0.2, 0.2, 1.0 ],
+    "layer": -15
+  },
+  
+  "top": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/top",
+    "layer": -11
+  },
+  
+  "bottom": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/bottom",
+    "layer": -21
+  },
+  
+  //---------------------------------------------------------------------------
+  // player
+  //---------------------------------------------------------------------------
+  
+  "1": {
+    "type": "custom",
+    "renderer": "paper_doll_renderer",
+    "size": [ "110%", "110%" ],
+    "offset": [ "-14%", 0 ],
+    "camera_tilt_degrees": -2,
+    "starting_rotation": -145,
+    "rotation": "gesture_x",
+    "layer": -10
+  },
+  
+  "2": {
+    "type": "custom",
+    "renderer": "paper_doll_renderer",
+    "size": [ "70%", "70%" ],
+    "offset": [ "8%", "-5%" ],
+    "camera_tilt_degrees": -3,
+    "starting_rotation": 25,
+    "rotation": "gesture_x",
+    "layer": -20
+  }
+  
+}
