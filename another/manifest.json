@@ -1,0 +1,45 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "made by @chromeheart",
+    "name": "another",
+    "uuid": "511b3fc1-64e1-44e3-98fa-b31ee60c6023",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 18, 0]
+  },
+  "modules": [
+    {
+      "description": "made by @chromeheart",
+      "type": "resources",
+      "uuid": "af538690-8f3e-41ce-911f-44d7ac646194",
+      "version": [1, 0, 0]
+    }
+  ],
+  "subpacks" :[
+    {
+      "folder_name": "graveyard",
+      "name": "graveyard",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "chross",
+      "name": "chross",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "self",
+      "name": "self",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "graysky",
+      "name": "gray sky",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "poetry",
+      "name": "poetry",
+      "memory_tier": 1
+    }
+  ]
+}
