@@ -1,0 +1,249 @@
+{
+"namespace":"pause",
+  
+  //---------------------------------------------------------------------------
+  // buttons
+  //---------------------------------------------------------------------------
+  
+  "main_menu": {
+    "type": "panel",
+    "controls": [
+      { "main_panel@pause.main_panel": {} },
+      { "title_scroll_panel@pause.title_scroll_panel": {} }
+    ]
+  },
+  
+  "main_panel": {
+    "type": "panel",
+    "size": [ 120, 100 ],
+    "offset": [ 40, 20 ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      { "main_row_panel@pause.main_row_panel": {} }
+    ]
+  },
+  
+  "main_row_panel": {
+    "type": "panel",
+    "size": [ 120, "100%" ],
+    "controls": [
+      { "stacked_panel@pause.stacked_panel": {} }
+    ]
+  },
+  
+  "stacked_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+    "orientation": "vertical",
+    "$label_col": [ 1, 1, 1 ],
+    "controls": [
+      {
+        "return_row@ch.stacked_row": {
+          "controls": [
+            { "play@ch.main_button": {
+                "$pressed_button_name": "button.menu_continue",
+                "$button_text": "menu.returnToGame"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "settings_row@ch.stacked_row": {
+          "controls": [
+            { "settings@ch.main_button": {
+                "$pressed_button_name": "button.menu_settings",
+                "$button_text": "menu.settings"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "skins@ch.stacked_row": {
+          "controls": [
+            { "skins@ch.main_button": {
+                "$pressed_button_name": "button.to_profile_or_skins_screen",
+                "$button_text": "menu.skins"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "achievements@ch.stacked_row": {
+          "controls": [
+            { "achievements@ch.main_button": {
+                "$pressed_button_name": "button.menu_achievements",
+                "$button_text": "menu.achievements"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "shop_row@ch.stacked_row": {
+          "controls": [
+            { "store@ch.main_button": {
+                "$pressed_button_name": "button.menu_store",
+                "$button_text": "menu.store"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "exit_row@ch.stacked_row": {
+          "controls": [
+            { "exit@ch.main_button": {
+                "$pressed_button_name": "button.menu_quit",
+                "$button_text": "pauseScreen.quit"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "title_scroll_panel@common.scrolling_panel": {
+    "$scrolling_content": "pause.title_root",
+    "$show_background": false,
+    "$scroll_size": [ 0, "100%" ]
+  },
+  
+  "title_root": {
+    "type": "panel",
+    "controls": [
+      {
+        "title@ch.title_label": {
+          "text": "#text",
+          "offset": [ 45, -40 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "$label_col": [ 1, 1, 1 ],
+          "bindings": [
+            {
+              "binding_name": "#players_list_title"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#players_list_title - 'Players in ')",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "right_side": {
+    "type": "panel",
+    "size": [ "30%", 170 ],
+    "offset": [ 0, 30 ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      { "player_list_scrolling_panel@pause.player_list_scrolling_panel": {} }
+    ]
+  },
+  
+  "player_list": {
+  "controls": [
+      {
+        "vertical_padding_0@pause.vertical_padding": {
+          "size": [ 0, 1 ]
+        }
+      },
+      { "players_grid_panel@pause.players_grid": {} },
+      {
+        "vertical_padding_1@pause.vertical_padding": {
+          "size": [ 0, 3 ]
+        }
+      },
+      { "disconnected_from_multiplayer_label_panel@pause.disconnected_from_multiplayer_label_panel": {} },
+      {
+        "vertical_padding_2@pause.vertical_padding": {
+          "size": [ 0, 1 ]
+        }
+      }
+    ]
+  },
+  
+  //---------------------------------------------------------------------------
+  // controls
+  //---------------------------------------------------------------------------
+  
+  "bg": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "alpha": 0.3,
+    "fill": true,
+    "layer": -10
+  },
+  
+  "root_content": {
+    "type": "panel",
+    "controls": [
+      { "left_side@pause.left_side": {} },
+      { "right_side@pause.right_side": {} }
+    ]
+  },
+  
+  "left_side@common.scrolling_panel": {
+    "$scrolling_pane_size": [ "70%", "100%" ],
+    "$scrolling_content": "pause.main_menu",
+    "$show_background": false,
+    "$scroll_size": [ 0, "100%" ]
+  },
+  
+  "pause_screen@common.base_screen": {
+    "cache_screen": true,
+    "$screen_animations": [
+    ],
+    "$background_animations": [
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_start",
+        "to_button_id": "button.menu_continue",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_vr_realign",
+        "to_button_id": "button.menu_vr_realign",
+        "mapping_type": "global",
+        "scope": "controller"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    "variables": [
+      {
+        "requires": "$ignore_edu_pause",
+        "$screen_content": "pause.root_content",
+        "$screen_bg_content": "pause.bg"
+      },
+      {
+        "requires": "(not $ignore_edu_pause)",
+        "$screen_content": "edu_pause.pause_screen_content"
+      }
+    ]
+  }
+}
