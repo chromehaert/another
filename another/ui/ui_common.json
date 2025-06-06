@@ -1,0 +1,19 @@
+{
+  
+  //---------------------------------------------------------------------------
+  // backgrounds
+  //---------------------------------------------------------------------------
+  
+    "dialog_background_hollow_common@dialog_background_common": {
+    "$fill_alpha": 0
+  },
+  
+  "bg_content": {
+    "type": "panel",
+    "ignored": "(not $is_pregame)",
+    "controls": [
+      { "custom@bg.custom": {} }
+    ]
+  }
+  
+}
