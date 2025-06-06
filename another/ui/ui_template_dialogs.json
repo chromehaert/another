@@ -1,0 +1,33 @@
+{
+  
+  "main_panel_thin": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "common_panel@common.common_panel": { "$dialog_background": "dialog_background_hollow_4_thin" }
+      },
+      {
+        "panel_indent": {
+          "type": "panel",
+          "size": [ "100% - 16px", "100% - 16px" ],
+          "offset": [ 0, 8 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "common_panel": {
+    "$dialog_background": ""
+  },
+  
+  "full_screen_background": {
+    "$fill_alpha": 0
+  }
+}
