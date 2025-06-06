@@ -1,0 +1,146 @@
+{
+"namespace":"start",
+  
+  //---------------------------------------------------------------------------
+  // buttons
+  //---------------------------------------------------------------------------
+  
+  "main_panel": {
+    "type": "panel",
+    "size": [ 120, 100 ],
+    "offset": [ 40, 20 ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      { "main_row_panel@start.main_row_panel": {} }
+    ]
+  },
+  
+  "main_row_panel": {
+    "type": "panel",
+    "size": [ 120, "100%" ],
+    "controls": [
+      { "stacked_panel@start.stacked_panel": {} }
+    ]
+  },
+  
+  "stacked_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+    "orientation": "vertical",
+    "controls": [
+      {
+        "play_row@ch.stacked_row": {
+          "controls": [
+            { "play@ch.main_button": {
+                "$pressed_button_name": "$play_button_target",
+                "$button_text": "menu.play"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "settings_row@ch.stacked_row": {
+          "controls": [
+            { "settings@ch.main_button": {
+                "$pressed_button_name": "button.menu_settings",
+                "$button_text": "menu.settings"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "skins@ch.stacked_row": {
+          "controls": [
+            { "skins@ch.main_button": {
+                "$pressed_button_name": "button.menu_skins",
+                "$button_text": "menu.skins"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "achievements@ch.stacked_row": {
+          "controls": [
+            { "achievements@ch.main_button": {
+                "$pressed_button_name": "button.menu_achievements",
+                "$button_text": "menu.achievements"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "shop_row@ch.stacked_row": {
+          "controls": [
+            { "store@ch.main_button": {
+                "$pressed_button_name": "button.menu_store",
+                "$button_text": "menu.store"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "title_scroll_panel@common.scrolling_panel": {
+    "$scrolling_content": "start.title_root",
+    "$show_background": false,
+    "$scroll_size": [ 0, "100%" ]
+  },
+  
+  "title_root": {
+    "type": "panel",
+    "controls": [
+      {
+        "title@ch.title_label": {
+          "text": "#text",
+          "offset": [ 45, -40 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "bindings": [
+            {
+              "binding_name": "#playername"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('Hello, ' + #playername",
+              "target_property_name":"#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  //---------------------------------------------------------------------------
+  // controls
+  //---------------------------------------------------------------------------
+  
+  "root_content": {
+    "type": "panel",
+    "controls": [
+      { "main_panel@start.main_panel": {} },
+      { "title_scroll_panel@start.title_scroll_panel": {} }
+    ]
+  },
+  
+  "root_scroll_panel@common.scrolling_panel": {
+    "$scrolling_content": "start.root_content",
+    "$show_background": false,
+    "$scroll_size": [ 0, "100%" ]
+  },
+  
+  "start_screen@common.base_screen": {
+    "$screen_animations": [
+    ],
+    "$background_animations": [
+    ],
+    "$screen_content": "start.root_scroll_panel",
+    "$screen_bg_content": "common.bg_content"
+  }
+}
