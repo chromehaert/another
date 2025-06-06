@@ -1,0 +1,27 @@
+{
+  
+  "namespace": "bg",
+  
+  "custom": {
+    "type": "panel",
+    "controls": [
+      { "cross@bg.cross": {} }
+    ]
+  },
+  
+  //---------------------------------------------------------------------------
+  // backgrounds
+  //---------------------------------------------------------------------------
+  
+  "cross": {
+    "type": "label",
+    "layer": -10,
+    "color": "$label_col",
+    "alpha": 0.6,
+    "offset": [ "20%", 0 ],
+    "font_size": "large",
+    "font_scale_factor": 0.5,
+    "text": "                                    time, i saw a look of wonder\n                                last                                 in\n                             one                                       a\n                       closed                                    face\n                      eyes                                   that\n                   her                                 clearly\n                     before                       denied\n                           finished.                 all\n                                were                  endings;\n                                   words                 and\n                      cross when all                          a\n                me the                                        smile.\n           handed                                             oh\n         she                                                that\n       _O_  friend old                          wondrous\n      /   /              an                    smile,\n ___/   /___            seeing            like\n/___     ___/                 when      one\n    /   /                              gives\n   /   /\n  /__/"
+  }
+  
+}
