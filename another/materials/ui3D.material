@@ -1,0 +1,12 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "name_tag": {
+			"blendSrc": "Zero",
+			"blendDst": "Zero"
+    },
+    "name_tag_text": {
+      "+states": [ "Blending" ]
+    }
+  }
+}
