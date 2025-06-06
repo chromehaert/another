@@ -1,0 +1,81 @@
+{
+  
+  "section_title_label": {
+    "color": [ 1, 1, 1 ]
+  },
+  
+  "dialog_title_label": {
+    "color": [ 1, 1, 1 ]
+  },
+  
+  "dynamic_dialog_screen@common.base_screen": {
+    "$screen_animations": [
+    ],
+    "$background_animations": [
+    ],
+    "$screen_content": "settings_common.root_panel",
+    "$screen_bg_content": "common.bg_content",
+    "$header_safezone_control": "common.empty_panel",
+    "$header_bar_control": "commone.empty_panel"
+  },
+  
+  "root_panel": {
+    "type": "panel",
+    "layer": 10,
+    "controls": [
+      {"root_content@settings_common.root_content": {}}
+    ]
+  },
+  
+  "root_content@common_dialogs.main_panel_thin": {
+    "size": [ "80%", "95%" ],
+    "$child_control": "$dialog_content"
+  },
+  
+  "toggle_button_control": {
+    "controls": [
+      {
+        "progress_loading_bars@progress.progress_loading_bars": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "color": "$glyph_color",
+          "offset": [ 5, 0 ],
+          "layer": 5,
+          "size": "$glyph_size",
+          "visible": false,
+          "$glyph_progress_bindings|default": [],
+          "bindings": "$glyph_progress_bindings"
+        }
+      },
+      {
+        "tab_button_text": {
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ "100% - 38px", "default" ],
+          "max_size": [ "100% - 38px", "100% - 4px" ],
+          "offset": "$button_label_offset",
+          "text": "$button_text",
+          "layer": 3,
+          "color": "$text_color",
+          "alpha": "$content_alpha",
+
+          "$button_text_binding_type|default": "none",
+          "$button_text_grid_collection_name|default": "",
+          "$button_text_binding_condition|default": "none",
+
+          "bindings": [
+            {
+              "binding_type": "$button_text_binding_type",
+              "binding_condition": "$button_text_binding_condition",
+              "binding_collection_name": "$button_text_grid_collection_name",
+              "binding_name": "$button_text",
+              "binding_name_override": "$button_text"
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
+}
