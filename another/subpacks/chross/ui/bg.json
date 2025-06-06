@@ -1,0 +1,35 @@
+{
+  
+  "namespace": "bg",
+  
+  "custom": {
+    "type": "panel",
+    "controls": [
+      { "cross@bg.cross": {} }
+    ]
+  },
+  
+  //---------------------------------------------------------------------------
+  // backgrounds
+  //---------------------------------------------------------------------------
+  
+  "cross_anim": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 119,
+    "frame_step": 5,
+    "fps": 10
+  },
+  
+  "cross": {
+    "type": "image",
+    "layer": -10,
+    "texture": "textures/ui/chross",
+    "size": [ "120%", "120%" ],
+    "uv_size": [ 90, 90 ],
+    "uv": "@bg.cross_anim",
+    "disable_anim_fast_forward": true,
+    "offset": [ "20%", "20%" ]
+  }
+  
+}
