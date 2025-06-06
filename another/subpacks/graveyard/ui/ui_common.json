@@ -1,0 +1,395 @@
+{
+  //---------------------------------------------------------------------------
+  // backgrounds
+  //---------------------------------------------------------------------------
+  
+  "dialog_background_hollow_common@dialog_background_common": {
+    "$fill_alpha": 0
+  },
+  
+  "bg_content": {
+    "type": "panel",
+    "controls": [
+      { "bg@common.bg": {} }
+    ]
+  },
+  
+  "bg_content": {
+    "type": "panel",
+    "controls": [
+      { "1@common.layer1": {
+          "offset": [ 0, "2.5%" ]
+        }
+      },
+      { "2@common.layer2": {
+          "offset": [ 0, "15%" ]
+        }
+      },
+      { "3@common.layer3": {
+          "offset": [ 0, "25%" ]
+        }
+      }
+    ]
+  },
+  
+  //---------------------------------------------------------------------------
+  // layer 1
+  //---------------------------------------------------------------------------
+  
+  "layer1": {
+    "type": "panel",
+    "controls": [
+      { "11@common.11": {} },
+      { "12@common.12": {} },
+      { "13@common.13": {} },
+      { "14@common.14": {} }
+    ]
+  },
+  
+  "11": {
+    "type": "image",
+    "texture": "textures/ui/1",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.110"
+    ]
+  },
+  
+  "12": {
+    "type": "image",
+    "texture": "textures/ui/1",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.120"
+    ]
+  },
+  
+  "13": {
+    "type": "image",
+    "texture": "textures/ui/1",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.130"
+    ]
+  },
+  
+  "14": {
+    "type": "image",
+    "texture": "textures/ui/1",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.140"
+    ]
+  },
+  
+  // anim
+  
+  "110": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.111"
+  },
+  
+  "111": {
+    "anim_type": "offset",
+    "duration": 150,
+    "from": [ "-190%", 0 ],
+    "to": [ "-100%", 0 ],
+    "next": "@common.110"
+  },
+  
+  "120": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.121"
+  },
+  
+  "121": {
+    "anim_type": "offset",
+    "duration": 150,
+    "from": [ "-100%", 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.120"
+  },
+  
+  "130": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.131"
+  },
+  
+  "131": {
+    "anim_type": "offset",
+    "duration": 150,
+    "from": [ 0, 0 ],
+    "to": [ "100%", 0 ],
+    "next": "@common.130"
+  },
+  
+  "140": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.141"
+  },
+  
+  "141": {
+    "anim_type": "offset",
+    "duration": 150,
+    "from": [ "100%", 0 ],
+    "to": [ "190%", 0 ],
+    "next": "@common.140"
+  },
+  
+  //---------------------------------------------------------------------------
+  // layer 2
+  //---------------------------------------------------------------------------
+  
+  "layer2": {
+    "type": "panel",
+    "controls": [
+      { "21@common.21": {} },
+      { "22@common.22": {} },
+      { "23@common.23": {} },
+      { "24@common.24": {} }
+    ]
+  },
+  
+  "21": {
+    "type": "image",
+    "texture": "textures/ui/2",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.210"
+    ]
+  },
+  
+  "22": {
+    "type": "image",
+    "texture": "textures/ui/2",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.220"
+    ]
+  },
+  
+  "23": {
+    "type": "image",
+    "texture": "textures/ui/2",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.230"
+    ]
+  },
+  
+  "24": {
+    "type": "image",
+    "texture": "textures/ui/2",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.240"
+    ]
+  },
+  
+  // anim
+  
+  "210": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.211"
+  },
+  
+  "211": {
+    "anim_type": "offset",
+    "duration": 100,
+    "from": [ "-190%", 0 ],
+    "to": [ "-100%", 0 ],
+    "next": "@common.210"
+  },
+  
+  "220": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.221"
+  },
+  
+  "221": {
+    "anim_type": "offset",
+    "duration": 100,
+    "from": [ "-100%", 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.220"
+  },
+  
+  "230": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.231"
+  },
+  
+  "231": {
+    "anim_type": "offset",
+    "duration": 100,
+    "from": [ 0, 0 ],
+    "to": [ "100%", 0 ],
+    "next": "@common.230"
+  },
+  
+  "240": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.241"
+  },
+  
+  "241": {
+    "anim_type": "offset",
+    "duration": 100,
+    "from": [ "100%", 0 ],
+    "to": [ "190%", 0 ],
+    "next": "@common.240"
+  },
+  
+  //---------------------------------------------------------------------------
+  // layer 3
+  //---------------------------------------------------------------------------
+  
+  "layer3": {
+    "type": "panel",
+    "controls": [
+      { "31@common.31": {} },
+      { "32@common.32": {} },
+      { "33@common.33": {} },
+      { "34@common.34": {} }
+    ]
+  },
+  
+  "31": {
+    "type": "image",
+    "texture": "textures/ui/3",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.310"
+    ]
+  },
+  
+  "32": {
+    "type": "image",
+    "texture": "textures/ui/3",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.320"
+    ]
+  },
+  
+  "33": {
+    "type": "image",
+    "texture": "textures/ui/3",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.330"
+    ]
+  },
+  
+  "34": {
+    "type": "image",
+    "texture": "textures/ui/3",
+    "size": [ "100%", "100%" ],
+    "layer": -5,
+    "anims": [
+    "@common.340"
+    ]
+  },
+  
+  // anim
+  
+  "310": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.311"
+  },
+  
+  "311": {
+    "anim_type": "offset",
+    "duration": 60,
+    "from": [ "-190%", 0 ],
+    "to": [ "-100%", 0 ],
+    "next": "@common.310"
+  },
+  
+  "320": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.321"
+  },
+  
+  "321": {
+    "anim_type": "offset",
+    "duration": 60,
+    "from": [ "-100%", 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.320"
+  },
+  
+  "330": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.331"
+  },
+  
+  "331": {
+    "anim_type": "offset",
+    "duration": 60,
+    "from": [ 0, 0 ],
+    "to": [ "100%", 0 ],
+    "next": "@common.330"
+  },
+  
+  "340": {
+    "anim_type": "offset",
+    "duration": 0,
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@common.341"
+  },
+  
+  "341": {
+    "anim_type": "offset",
+    "duration": 60,
+    "from": [ "100%", 0 ],
+    "to": [ "190%", 0 ],
+    "next": "@common.340"
+  }
+  
+}
