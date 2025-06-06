@@ -1,0 +1,11 @@
+{
+  
+  "play_screen@common.base_screen": {
+    "$screen_animations": [
+    ],
+    "$background_animations": [
+    ],
+    "$screen_bg_content": "common.bg_content"
+  }
+  
+}
